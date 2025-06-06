@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description')->nullable(); // Descrição opcional
             $table->boolean('is_selected')->default(false); // Se foi escolhido
             $table->string('selected_by')->nullable(); // Nome do doador
+            $table->string('selected_by_phone')->nullable(); // Telefone do doador
             $table->timestamps();
         });
     }

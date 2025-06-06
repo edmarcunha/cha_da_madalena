@@ -41,4 +41,21 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    /**
+     * Define o estado para um usuário administrador.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function admin(): Factory
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'name' => 'Admin',
+                'email' => 'admin@teste.com',
+                'password' => Hash::make('12345678'),
+                'email_verified_at' => now(),
+            ];
+        });
+    }
 }

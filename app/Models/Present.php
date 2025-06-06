@@ -12,5 +12,6 @@ class Present extends Model
         'description',
         'is_selected',
         'selected_by',
+        'selected_by_phone',
     ];
 }
