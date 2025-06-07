@@ -7,12 +7,22 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './resources/**/*.blade.php',
+        './resources/**/*.js',
+        './resources/**/*.vue',
     ],
 
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                // sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                poppins: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+                'wedding-blue': '#A3BFFA',
+                'wedding-pink': '#FBB6CE',
+                'wedding-gray': '#F7FAFC',
+                'wedding-dark': '#2D3748',
             },
         },
     },
