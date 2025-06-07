@@ -53,9 +53,14 @@ class PresentController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string|max:1000',
+            'purchase_link' => 'nullable|url',
         ]);
         
-        Present::create($request->only('name', 'description'));
+        Present::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'purchase_link' => $request->purchase_link,
+        ]);
         return redirect('/admin')->with('success', 'Presente adicionado com sucesso!');
     }
 

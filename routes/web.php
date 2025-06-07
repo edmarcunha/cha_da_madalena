@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PresentController;
+use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -26,6 +27,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/add', [PresentController::class, 'store']); // Adicionar presente
     Route::delete('/admin/delete/{id}', [PresentController::class, 'delete'])->name('presents.delete');
     Route::patch('/admin/remove-donor/{id}', [PresentController::class, 'removeDonor'])->name('presents.removeDonor');
+    Route::get('/settings', [SettingsController::class, 'edit'])->name('settings.edit');
+    Route::patch('/settings', [SettingsController::class, 'update'])->name('settings.update');
 });
 
 require __DIR__.'/auth.php';

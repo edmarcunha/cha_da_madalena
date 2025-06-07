@@ -10,6 +10,7 @@ class Present extends Model
     protected $fillable = [
         'name',
         'description',
+        'purchase_link',
         'is_selected',
         'selected_by',
         'selected_by_phone',
